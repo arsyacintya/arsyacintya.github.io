@@ -11,4 +11,4 @@ $(this).removeClass('xepo_ads');
 window.open('https://www.highrevenuegate.com/ysvks7g42e?key=2aeac5900a9f0bd8cd863490958fe863', '_blank');
 });
 };
-document.writeln("<script type=\'text/javascript\' src=\'//pl19660870.highrevenuegate.com/8f/c3/02/8fc302690fafab2f0a1294b5d57af60d.js\'></script>");
+document.writeln("<script type=\'text/javascript\' src=\'//pl14430940.highrevenuegate.com/8d/60/b6/8d60b6c1eb0a9791481f2b3c561d4345.js\'></script>");
