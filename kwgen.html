@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Suggest Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#ffffff">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+	<style type="text/css">
+		.bg-light {
+  		background-color: #f8f9fa00 !important;
+		}
+	</style>
+</head>
+<body style="background-color: black;">
+			<div class="container" style="background-color: currentColor;">
+		
+		<div class="col-md-8 offset-md-2 my-4">
+			<div class="card mb-4">
+				<div class="col-12 my-2" align="center">
+					<h1 class="h3">JVAK</h1>
+				</div>
+				<div class="card-header">
+					<nav class="navbar navbar-dark bg-primary">
+  				<!-- Navbar content -->
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+					    <span class="navbar-toggler-icon"></span>
+					  </button>
+					  <div class="collapse navbar-collapse" id="navbarText">
+					    <ul class="navbar-nav mr-auto">
+					      <li class="nav-item active">
+					        <a class="nav-link" href="/alat/">Home <span class="sr-only">(current)</span></a>
+					      </li>
+					      <li class="nav-item dropdown">
+        					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					          GWT
+					        </a>
+					        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					          <a class="dropdown-item" href="http://localhost/alat/submit/add-domain.html">Add Domain</a>
+					          <a class="dropdown-item" href="http://localhost/alat/submit/index.html">Submit Sitemap</a>
+					          <a class="dropdown-item" href="#">Something else here</a>
+					        </div>
+					      <li class="nav-item dropdown">
+        					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					          Blogger
+					        </a>
+					        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					          <a class="dropdown-item" href="/alat/blogger/kw2url.html">Keyword to URL</a>
+					          <a class="dropdown-item" href="/alat/blogger/robotstxtblog.html">Robotstxtblog</a>
+					          <a class="dropdown-item" href="/alat/blogger/listblogspot.html">List Blogspot</a>
+					          <a class="dropdown-item" href="/alat/blogger/reqblog.php">List Blogspot Name</a>
+					        </div>
+					      <li class="nav-item dropdown">
+        					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					          Tools
+					        </a>
+					        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					          <a class="dropdown-item" href="/alat/tools/keyword.html">KW Generator</a>
+					          <a class="dropdown-item" href="/alat/tools/kwgen.php">Keword Generator</a>
+					          <a class="dropdown-item" href="#">Menu3</a>
+					        </div>
+					    </ul>
+					  </div>
+					</nav>
+				</nav>
+	
+		<div class="col-12 my-2" align="center">
+			<h1 class="h3">Google Suggest Generator</h1>
+		</div>
+		<div class="col-md-8 offset-md-2 my-4">
+			
+					<div class="form-group">
+					<label for="google-lang">Language</label>
+						<select class="form-control" id="google-lang">
+							<option value="en" selected >English</option>
+							<option value="fr" >French</option>
+							<option value="de" >German</option>
+							<option value="hi" >Hindi</option>
+							<option value="id" >Indonesian</option>
+							<option value="it" >Italian</option>
+							<option value="kn" >Kannada</option>
+							<option value="ru" >Russian</option>
+							<option value="es" >Spanish</option>
+						</select>
+					</div>
+					<div class="form-group">
+					<label for="media-type">Media Type</label>
+						<select multiple class="form-control" id="media-type">
+							<option value="sh" selected >products</option>
+							<option value="i" >Image</option>
+							<option value="r" >Recipes</option>
+							<option value="yt" >Youtube</option>
+							<option value="bo" >Books</option>
+							<option value="n" >News</option>
+							<option value="" >Web Search</option>
+						</select>
+					</div>
+					<div class="form-group">
+					  <label for="comment">Keywords:</label>
+					  <textarea class="kw_list form-control" rows="10" id="kw_list"></textarea>
+					</div> 
+					<button class="get_suggest btn btn-primary">Get Suggest</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
+	<div class="d-block" align="center">
+	<p>Created By <div><center><img class="img" src="http://localhost/alat/img/logo.png" style="max-width: 5%"></center></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(document).on('click','.get_suggest',function()
+	{    
+		var list_arr = $(".kw_list").val().replace(/\r\n/g,"\n").split("\n");
+		if(list_arr)
+		{
+			$(".kw_list").val('');
+			$.each(list_arr, function (key, val) {
+		        get_suggest(val);
+		    });		
+		}
+	})
+
+	var get_suggest = function(query){
+
+		var hl = $('#google-lang').val(),
+		ds = $('#media-type').val();
+
+		//console.log(hl);
+		//console.log(ds);
+
+		$.ajax({
+	        url: 'https://suggestqueries.google.com/complete/search',
+	        jsonp: 'jsonp',
+	        cache: !0,
+	        dataType: "jsonp",
+	        async: !0,
+	        crossDomain: !0,
+	        method: "GET",
+	        data: {
+	            q: query,
+	            hl: hl,
+	            ds: ds,
+	            client: 'chrome'
+	        }
+	    }).done(function(data)
+	    {	
+	    	if(data[1].length > 0)
+	    	{
+	    		var kw_list = $(".kw_list").val();
+
+				var rn = "";
+
+				if(kw_list)
+				{
+					rn = "\r\n";
+				}
+
+		    	var hasil = data[1].join("\r\n");
+
+		        $(".kw_list").val(kw_list+rn+hasil);
+	    	}
+	    });
+	}
+})
+</script>
+</html>
