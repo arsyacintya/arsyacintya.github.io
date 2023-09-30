@@ -8,7 +8,8 @@ $('body').addClass('xepo_ads');
 $(document).on('click','.xepo_ads',function(e){
 $(this).removeClass('xepo_ads');
 //ubah google dengan ads direct link
-window.open('https://www.highperformancecpmgate.com/arwgc4a3gj?key=32e55ecf41ec9483a4c30821e28dcfeb', '_blank');
+//window.open('https://www.highperformancecpmgate.com/arwgc4a3gj?key=32e55ecf41ec9483a4c30821e28dcfeb', '_blank');
+window.open('https://vdbaa.com/fullpage.php?section=General&pub=927999&ga=g', '_blank');
 });
 };
 document.write('<script type="text/javascript" src="https://udbaa.com/bnr.php?section=General&pub=927999&format=300x250&ga=g"></script>');
