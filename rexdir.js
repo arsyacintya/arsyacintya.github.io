@@ -9,6 +9,6 @@ $(document).on('click','.xepo_ads',function(e){
 $(this).removeClass('xepo_ads');
 //ubah google dengan ads direct link
 //window.open('https://www.highperformancecpmgate.com/arwgc4a3gj?key=32e55ecf41ec9483a4c30821e28dcfeb', '_blank');
-window.open('https://gloorsie.com/4/6470821', '_blank');
+window.open('https://www.highcpmgate.com/z1zch5u7?key=3f54a31fb0971a96d274864383d1fd9a', '_blank');
 });
 };
