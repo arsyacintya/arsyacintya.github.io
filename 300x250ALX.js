@@ -5,4 +5,4 @@
 		'width' : 300,
 		'params' : {}
 	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topcreativeformat.com/2f2cd4c04b0b336023f7481c876aa8ea/invoke.js"></scr' + 'ipt>');
+document.write('<script type="text/javascript" src="//menacehabit.com/2f2cd4c04b0b336023f7481c876aa8ea/invoke.js"></script>');
