@@ -1,0 +1,1 @@
+document.write("<script type=\"text\/javascript\">\r\n\tatOptions = {\r\n\t\t'key' : '35ff9bfde9c6692e37b4dc39e859a703',\r\n\t\t'format' : 'iframe',\r\n\t\t'height' : 250,\r\n\t\t'width' : 300,\r\n\t\t'params' : {}\r\n\t};\r\n<\/script>\r\n<script type=\"text\/javascript\" src=\"\/\/www.topcpmcreativeformat.com\/35ff9bfde9c6692e37b4dc39e859a703\/invoke.js\"><\/script>");
