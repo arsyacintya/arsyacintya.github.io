@@ -1,2 +1,2 @@
-document.write('<script async="async" data-cfasync="false" src="//pl19445481.profitablegatecpm.com/0b3eff38442f596c83c4b4cecd065489/invoke.js"></script>');
-document.write('<div id="container-0b3eff38442f596c83c4b4cecd065489"></div>');
+document.write('<script async="async" data-cfasync="false" src="//pl23648107.profitablecpmrate.com/bc40a1b3bb7131032637f39a23d5fbe5/invoke.js"></script>');
+document.write('<div id="container-bc40a1b3bb7131032637f39a23d5fbe5"></div>');
