@@ -1,10 +1,8 @@
-document.writeln("<!--script type=\"text/javascript\">");
-document.writeln("	atOptions = {");
-document.writeln("		\'key\' : \'5cc25e64f4ac5746eba90136f59fb246\',");
-document.writeln("		\'format\' : \'iframe\',");
-document.writeln("		\'height\' : 600,");
-document.writeln("		\'width\' : 160,");
-document.writeln("		\'params\' : {}");
-document.writeln("	};");
-document.writeln("	document.write(\'<scr\' + \'ipt type=\"text/javascript\" src=\"http\' + (location.protocol === \'https:\' ? \'s\' : \'\') + \'://www.highperformanceformat.com/5cc25e64f4ac5746eba90136f59fb246/invoke.js\"></scr\' + \'ipt>\');");
-document.writeln("</script-->");
+	atOptions = {
+		'key' : '2f2cd4c04b0b336023f7481c876aa8ea',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+
